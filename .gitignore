@@ -1,0 +1,22 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven / Gradle
+target/
+build/
+*.iml
+
+# IDE files
+.idea/
+*.vscode/
+*.project
+*.classpath
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
