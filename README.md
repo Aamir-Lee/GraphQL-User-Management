@@ -1,4 +1,4 @@
-# GraphQL-User-Manage# GraphQL User Management Backend
+# GraphQL User Management Backend
 
 A Spring Boot backend project exposing a GraphQL API for dynamic user management.
 
