@@ -4,14 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 
 @Data
 public class User {
-    private int id;
+    private UUID id;
     private String name;
     private String email;
 
-    public User(int id, String name, String email) {
+    public User(UUID id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -25,10 +27,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getId() {
