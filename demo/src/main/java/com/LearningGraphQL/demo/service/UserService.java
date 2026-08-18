@@ -26,11 +26,11 @@ public class UserService {
     }
 
     public Optional<User> getUserById(UUID id) {
-        return users.stream().filter(user->user.getId().equals(id));
+        return users.stream().filter(user->user.getId().equals(id)).findFirst();
     }
 
     public  User addUser(UUID id, String name, String email) {
-        User newUser = new User(UUID.randomUUID(), name, email);
+        User newUser = new User(id, name, email);
         users.add(newUser);
         return newUser;
     }

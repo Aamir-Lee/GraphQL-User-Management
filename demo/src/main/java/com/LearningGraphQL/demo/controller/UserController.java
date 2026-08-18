@@ -8,6 +8,7 @@ import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 public class UserController {
@@ -23,12 +24,12 @@ public class UserController {
     }
 
     @QueryMapping
-    public User userById(@Argument("id") int id){
+    public User userById(@Argument("id") UUID id){
         return userService.getUserById(id).orElse(null);
     }
 
     @MutationMapping
-    public User addUser(@Argument int id,
+    public User addUser(@Argument UUID id,
                         @Argument String name,
                         @Argument String email) {
         return userService.addUser(id, name, email);

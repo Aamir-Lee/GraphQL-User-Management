@@ -29,7 +29,7 @@ public class User {
         this.email = email;
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
